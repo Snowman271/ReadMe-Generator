@@ -1,6 +1,8 @@
 
 # ReadMeGenerator
 
+Video link: https://watch.screencastify.com/v/eYtOCiHMz9PAwehyj9FG
+
 ## Description
 An application used to generate professional readMe files
 
