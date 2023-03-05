@@ -66,9 +66,9 @@ function writeToFile(template) {
 //Inquirer install
 inquirer
     .prompt(questionsArray)
-        .then((data) => {
-            let licenseTxt = data.license;
-            let licenseBadge = licenseTxt;
+    .then((data) => {
+        let licenseTxt = data.license;
+        let licenseBadge = licenseTxt;
 
 // License Notice Templates for README. Maligned with code to prevent formatting errors in implementation
 const apacheLicense = `
