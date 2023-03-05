@@ -20,7 +20,7 @@ const questionsArray = [
     },
     {
         type: 'input',
-        message: 'Provide an example of usage of the application, If needed you can add screenshots',
+        message: 'Provide an example of usage of the application, If needed you can add screenshots using syntax: \n ```md \n ![alt text](assets/images/screenshot.png) \n   ```\n',
         name: 'usage',
     },
     {
@@ -137,7 +137,7 @@ ${data.usage}
 
 ## Credits
 If you have questions or want more info Please feel free to email me!
-Email: [${data.email}](mailto:${data.email});
+Email: [${data.email}](mailto:${data.email}) \n
 GitHub Username: [${data.gitHubUser}](https://github.com/${data.gitHubUser})
 
 ## License
