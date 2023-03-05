@@ -41,26 +41,27 @@ const questionsArray = [
     },
     {
         type: 'input',
+        message: 'Enter current year?',
+        name: 'year'
+    },
+    {
+        type: 'input',
         message: 'Provide your GitHub Username',
-        name: 'gitHub'
+        name: 'gitHubUser'
     },
     {
         type: 'input',
         message: 'Provide your preffered Email for contact',
         name: 'email'
-    },
-    {
-        type: 'input',
-        message: 'Provide the name of current Developer',
-        name: 'devName'
-    },
-    {
-        type: 'input',
-        message: 'Enter current year?',
-        name: 'year'
     }
-
 ];
+
+// A function to write README file
+function writeToFile(template) {
+    const readMeInfo = template;
+    fs.writeFile('README.md', readMeInfo, (err) => 
+    err ? console.log(err) : console.log('Your Read was Created!!'))
+    }
 
 //Inquirer install
 inquirer
@@ -127,14 +128,20 @@ If your README is Is to vast or difficult to organize, you can organize catagori
 - [Contributions](#contributions)
 - [Tests](#tests)
 - [Questions](#questions)
+
 ## Installation
 ${data.installation}
 
 ## Usage
 ${data.usage}
 
-${licenseBadge}
+## Credits
+If you have questions or want more info Please feel free to email me!
+Email: [${data.email}](mailto:${data.email});
+GitHub Username: [${data.gitHubUser}](https://github.com/${data.gitHubUser})
+
 ## License
+${licenseBadge}
 ${licenseTxt}
 
 ## How to Contribute
@@ -146,16 +153,4 @@ ${data.testIns}
 
         writeToFile(readMeGen);
     })
-
-// A function to write README file
-function writeToFile(template) {
-    const readMeInfo = template;
-    fs.writeFile('README.md', readMeInfo, (err) => 
-    err ? console.log(err) : console.log('Your Read was Created!!'))
-    }
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+    
